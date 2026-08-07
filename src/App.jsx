@@ -2,6 +2,9 @@ import React, {useEffect} from 'react'
 import gsap from "gsap";
 import {ScrollTrigger, SplitText, ScrollSmoother } from "gsap/all";
 
+import Wrap from './components/Wrap/Wrap.jsx'
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText)
 
 const App = () => {
   useEffect(() => {
@@ -16,7 +19,7 @@ const App = () => {
 
   return(
     <>
-    
+    <Wrap/>
     </>
   )
   
