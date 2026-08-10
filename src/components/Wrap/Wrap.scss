@@ -1,31 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+/* warpSpeed.css */
+@import url("https://fonts.googleapis.com/css?family=Audiowide");
 
-.wrap-wrap{
-    position: fixed;
-    inset: 0;
-    overflow: hidden;
+.warp-wrap {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
 }
 
-.wrap-title{
-  font-family: "Audiowide", sans-serif;
+.warp-title {
+  font-family: Audiowide, sans-serif;
   font-size: 24px;
   color: #eed6fe;
   position: fixed;
-  top: 8px; left: 8px;
+  top: 8px;
+  left: 8px;
   z-index: 10;
   user-select: none;
   pointer-events: none;
 }
 
-.wrap-desc{
-    font-size: 0.75em;
-    margin: 6px 0 0;
+.warp-desc {
+  font-size: 0.75em;
+  margin: 6px 0 0;
 }
 
-.wrap-canvas{
-    position: fixed;
-    inset: 0;
-    background-color: #000;
-    display: block;
-    z-index: 0;
+.warp-canvas {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: block;
+  z-index: 0;
 }

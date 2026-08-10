@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import "./Wrap.scss";
 
-export default function WrapSpeed() {
+export default function WarpSpeed() {
     const canvasRef = useRef(null);
     const rafRef = useRef(0);
 
@@ -19,18 +19,18 @@ export default function WrapSpeed() {
             w = canvas.width = window.innerWidth;
             h = canvas.height = window.innerHeight;
         };
-
         resize();
 
         let xMod = 0;
         let yMod = 0;
-        let wrapSpeed = 0;
+        let warpSpeed = 0;
 
-        const setWrap = (on) => (wrapSpeed = on ? 1 : 0);
+        const setWarp = (on) => (warpSpeed = on ? 1 : 0);
 
+   
         function Star() {
             this.x = Math.random() * w;
-            this.y = Math.random() * h; 
+            this.y = Math.random() * h;
             this.c = 0;
         }
 
@@ -39,7 +39,7 @@ export default function WrapSpeed() {
         };
 
         Star.prototype.updatePos = function () {
-            const speedMult = wrapSpeed ? 0.028 : 0.02;
+            const speedMult = warpSpeed ? 0.028 : 0.02;
 
             const cx = w / 2;
             const cy = h / 2;
@@ -60,25 +60,26 @@ export default function WrapSpeed() {
         };
 
         const STAR_COUNT = 200;
-        const stars = Array.from({ length: STAR_COUNT }, () => new Star()); // Fixed typo: lengh -> length
+        const stars = Array.from({ length: STAR_COUNT }, () => new Star());
 
+      
         const onKeyDown = (e) => {
             const code = e.keyCode || e.which;
 
             switch (code) {
-                case 32:
-                    setWrap(true);
+                case 32: // space
+                    setWarp(true);
                     break;
-                case 37:
+                case 37: // left
                     xMod = Math.min(6, xMod + 0.3);
                     break;
-                case 38:
-                    yMod = Math.min(6, yMod + 0.3); // Fixed logical error: xMod -> yMod
+                case 38: // up
+                    yMod = Math.min(6, yMod + 0.3);
                     break;
-                case 39:
+                case 39: // right
                     xMod = Math.max(-6, xMod - 0.3);
                     break;
-                case 40:
+                case 40: // down
                     yMod = Math.max(-6, yMod - 0.3);
                     break;
                 default:
@@ -92,7 +93,7 @@ export default function WrapSpeed() {
 
             switch (code) {
                 case 32:
-                    setWrap(false);
+                    setWarp(false);
                     break;
                 case 37:
                 case 39:
@@ -108,39 +109,41 @@ export default function WrapSpeed() {
             e.preventDefault();
         };
 
+
         const onMouseDown = (e) => {
             if (e.button !== 0) return;
-            setWrap(true);
+            setWarp(true);
         };
 
         const onMouseUp = (e) => {
             if (e.button !== 0) return;
-            setWrap(false);
+            setWarp(false);
         };
 
         const onTouchStart = (e) => {
             e.preventDefault();
-            setWrap(true);
+            setWarp(true);
         };
-        const onTouchEnd = () => setWrap(false);
+        const onTouchEnd = () => setWarp(false);
 
         const draw = () => {
-            if (wrapSpeed === 0) {
-                ctx.fillStyle = "rgba(0,0,0,0.2)"; // Fixed format: 0,2 -> 0.2
+            if (warpSpeed === 0) {
+                ctx.fillStyle = "rgba(0,0,0,0.2)";
                 ctx.fillRect(0, 0, w, h);
             }
 
-            for (let i = 0; i < stars.length; i++) { // Fixed typo: lenght -> length
+            for (let i = 0; i < stars.length; i++) {
                 const s = stars[i];
                 const c = s.c;
 
-                if (wrapSpeed) {
-                    ctx.fillStyle = `rgb(${c},${Math.floor(c * 0.45)},0)`; // Fixed template string
+                if (warpSpeed) {
+                    ctx.fillStyle = `rgb(${c},${Math.floor(c * 0.45)},0)`;
                 } else {
                     ctx.fillStyle = `rgb(${c},${c},${c})`;
                 }
+
                 const size = c / 128;
-                ctx.fillRect(s.x, s.y, size, size); // Fixed typo: fillReact -> fillRect
+                ctx.fillRect(s.x, s.y, size, size);
                 s.updatePos();
             }
 
@@ -149,31 +152,27 @@ export default function WrapSpeed() {
 
         rafRef.current = requestAnimationFrame(draw);
 
-        // Add Listeners
+    
         window.addEventListener("resize", resize);
         window.addEventListener("keydown", onKeyDown, { passive: false });
         window.addEventListener("keyup", onKeyUp, { passive: false });
         canvas.addEventListener("mousedown", onMouseDown);
-        canvas.addEventListener("mouseup", onMouseUp);
-        canvas.addEventListener("touchstart", onTouchStart, { passive: false }); // Added missing listener
-        canvas.addEventListener("touchend", onTouchEnd); // Added missing listener
+        window.addEventListener("mouseup", onMouseUp);
 
-        // Cleanup
+       
         return () => {
             cancelAnimationFrame(rafRef.current);
             window.removeEventListener("resize", resize);
             window.removeEventListener("keydown", onKeyDown);
             window.removeEventListener("keyup", onKeyUp);
-            canvas.removeEventListener("mousedown", onMouseDown); // Fixed: window -> canvas
-            canvas.removeEventListener("mouseup", onMouseUp); // Fixed: window -> canvas
-            canvas.removeEventListener("touchstart", onTouchStart);
-            canvas.removeEventListener("touchend", onTouchEnd);
+            canvas.removeEventListener("mousedown", onMouseDown);
+            window.removeEventListener("mouseup", onMouseUp);
         };
     }, []);
 
     return (
-        <div className="wrap-wrap">
-            <canvas ref={canvasRef} className="wrap-canvas"></canvas>
+        <div className="warp-wrap">
+            <canvas ref={canvasRef} className="warp-canvas" />
         </div>
     );
 }
