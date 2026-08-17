@@ -10,6 +10,20 @@ gsap.registerPlugin(ScrollTrigger);
 
 const TIMELINE = [
   {
+    date: " JUN 2014 – MAR 2020",
+    title: "Secondary School",
+    org: "V.J. High School, Nandgaon",
+    desc:
+      "Completed Secondary Education with Technical in Electrical field.",
+  },
+  {
+    date: " JUL 2020 – MAR 2022",
+    title: "Higher Secondary School",
+    org: "Arts, Commerce and Science College, Nandgaon",
+    desc:
+      "Completed Higher Secondary Education in Science with Core Subjects: Physics, Chemestry, Mathematics, Biology.",
+  },
+  {
     date: "AUG 2023 – JUN 2027",
     title: "B.E. in Computer Engineering",
     org: "PRAVARA RURAL ENGINEERING COLLEGE",
@@ -23,34 +37,6 @@ const TIMELINE = [
     desc:
       "Built full-stack features (React + JavaScript) Projects.",
   },
-//   {
-//     date: "JUN 2022 – OCT 2023",
-//     title: "Software Engineer Trainee",
-//     org: "CDW Corporation, India",
-//     desc:
-//       "Built scalable React modules with 92% unit/component test coverage; modernized 5+ microservices (1800-Flowers) reducing latency from 2s → 0.5s; improved CI/CD reliability by 15%; delivered backend APIs for judiciary e-filing + PDF automation (State of Utah).",
-//   },
-//   {
-//     date: "OCT 2023 – OCT 2024",
-//     title: "Software Engineer",
-//     org: "CDW Corporation, India",
-//     desc:
-//       "Engineered IDN Accelerator plugin (Vanilla JS) cutting API calls by 35% and improving workflow efficiency by 30%; owned onsite Spring Boot + PrimeFaces module delivery for NY Presbyterian Hospital; refactored UI into reusable React components improving load time by 20% and reducing redundant code by 30%; mentored 2 engineers (25% faster ramp-up).",
-//   },
-//   {
-//     date: "2025",
-//     title: "AWS Certified Developer – Associate",
-//     org: "Amazon Web Services",
-//     desc:
-//       "Earned AWS DVA-C02 certification validating skills in developing and deploying cloud-native applications on AWS.",
-//   },
-//   {
-//     date: "SEP 2025 – PRESENT",
-//     title: "M.S. in Computer Science",
-//     org: "New York University (NYU), New York, NY",
-//     desc:
-//       "Coursework: Design & Analysis of Algorithms, Human Computer Interaction, Big Data, Cloud Computing. Seeking Software Engineering Internship roles.",
-//   },
 ];
 
 /**
@@ -134,7 +120,7 @@ export default function Experience() {
           },
         });
       });
-      
+
       ScrollTrigger.refresh();
     },
     { scope: sectionRef }

@@ -9,7 +9,7 @@ const PROJECTS = [
   tags: ["React", "GSAP", "ScrollTrigger", "SCSS", "Vite"],
   links: [
     { label: "Live Demo", href: "", icon: "↗" },
-    { label: "Source Code", href: "", icon: "⌂" },
+    { label: "Source Code", href: "https://github.com/udaykx/Portfolio", icon: "⌂" },
   ]
 }
 ,

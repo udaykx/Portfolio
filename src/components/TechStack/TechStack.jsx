@@ -11,14 +11,14 @@ const reactIcon = "/assets/images/tech-icons/reactjsIcon.svg";
 const htmlIcon = "/assets/images/tech-icons/htmlIcon.svg";
 const cssIcon = "/assets/images/tech-icons/cssIcon.svg";
 const jsIcon = "/assets/images/tech-icons/javascriptIcon.svg";
-// const tsIcon = "/assets/images/tech-icons/typescriptIcon.svg";
+const tsIcon = "/assets/images/tech-icons/typescriptIcon.svg";
 // const jqueryIcon = "/assets/images/tech-icons/jqueryIcon.svg";
 const tailwindIcon = "/assets/images/tech-icons/tailwindIcon.svg";
 const gsapIcon = "/assets/images/tech-icons/gsapIcon.svg";
 const sassIcon = "/assets/images/tech-icons/sassIcon.svg";
 
 // Backend icons
-// const javaIcon = "/assets/images/tech-icons/javaIcon.svg";
+const javaIcon = "/assets/images/tech-icons/javaIcon.svg";
 // const springIcon = "/assets/images/tech-icons/springIcon.svg";
 const apiIcon = "/assets/images/tech-icons/apiIcon.svg";
 // const junitIcon = "/assets/images/tech-icons/junitIcon.svg";
@@ -26,16 +26,16 @@ const apiIcon = "/assets/images/tech-icons/apiIcon.svg";
 const microservicesIcon = "/assets/images/tech-icons/microservicesIcon.svg";
 
 // Database icons
-// const postgresIcon = "/assets/images/tech-icons/postgresIcon.svg";
+const postgresIcon = "/assets/images/tech-icons/postgresIcon.svg";
 const mongoIcon = "/assets/images/tech-icons/mongoIcon.svg";
 const redisIcon = "/assets/images/tech-icons/redisIcon.svg";
 const mysqlIcon = "/assets/images/tech-icons/mysqlIcon.svg";
 // const h2Icon = "/assets/images/tech-icons/h2Icon.svg";
-const expressIcon = "/assets/images/tech-icons/Express.svg";
+const expressIcon = "/assets/images/tech-icons/express-js.png";
 const nodejsIcon = "/assets/images/tech-icons/Node.js.svg"; 
 
 // Cloud & DevOps icons
-// const awsIcon = "/assets/images/tech-icons/awsIcon.svg";
+const awsIcon = "/assets/images/tech-icons/awsIcon.svg";
 // const s3Icon = "/assets/images/tech-icons/s3Icon.svg";
 // const ec2Icon = "/assets/images/tech-icons/ec2Icon.svg";
 // const lambdaIcon = "/assets/images/tech-icons/lambdaIcon.svg";
@@ -47,6 +47,7 @@ const githubActionsIcon = "/assets/images/tech-icons/githubActionsIcon.svg";
 
 // Tools icons
 const postmanIcon = "/assets/images/tech-icons/postmanIcon.svg";
+const intellijIcon = "/assets/images/tech-icons/intellij-idea.svg";
 // const eclipseIcon = "/assets/images/tech-icons/eclipseIcon.svg";
 const vscodeIcon = "/assets/images/tech-icons/vscodeIcon.svg";
 const figmaIcon = "/assets/images/tech-icons/figmaIcon.svg";
@@ -61,7 +62,7 @@ const SECTIONS = [
             "HTML",
             "CSS",
             "Java Script",
-            // "Type Script",
+            "Type Script",
             // "JQuery",
             "Tailwind",
             "GSAP",
@@ -71,7 +72,7 @@ const SECTIONS = [
     {
         label: "BACKEND",
         techs: [
-            // "Java",
+            "Java",
             // "Spring Boot",
             // "Spring MVC",
             // "Spring Security",
@@ -83,11 +84,11 @@ const SECTIONS = [
             // "Swagger",
         ],
     },
-    { label: "DATABASE", techs: ["MongoDB", "Redis", "MySQL",] },
+    { label: "DATABASE", techs: ["Postgre SQL", "MongoDB", "Redis", "MySQL"] },
     {
         label: "CLOUD & DEVOPS",
         techs: [
-            // "AWS",
+            "AWS",
             // "S3",
             // "EC2",
             // "Lambda",
@@ -98,7 +99,7 @@ const SECTIONS = [
             // "CI/CD",
         ],
     },
-    { label: "Tools", techs: ["Postman", "Visual Studio Code", "Figma", "MS Office"] },
+    { label: "Tools", techs: ["Postman", "IntelliJ IDEA", "Visual Studio Code", "Figma", "MS Office"] },
 ];
 
 const TECH_ICONS = {
@@ -106,13 +107,13 @@ const TECH_ICONS = {
     HTML: htmlIcon,
     CSS: cssIcon,
     "Java Script": jsIcon,
-    // "Type Script": tsIcon,
+    "Type Script": tsIcon,
     // JQuery: jqueryIcon,
     Tailwind: tailwindIcon,
     GSAP: gsapIcon,
     SASS: sassIcon,
 
-    // Java: javaIcon,
+    Java: javaIcon,
     // "Spring Boot": springIcon,
     // "Spring MVC": springIcon,
     // "Spring Security": springIcon,
@@ -123,13 +124,13 @@ const TECH_ICONS = {
     "Node.js": nodejsIcon,  
     // Swagger: swaggerIcon,
 
-    // "Postgre SQL": postgresIcon,
+    "Postgre SQL": postgresIcon,
     MongoDB: mongoIcon,
     Redis: redisIcon,
     MySQL: mysqlIcon,
     // H2: h2Icon,
 
-    // AWS: awsIcon,
+    AWS: awsIcon,
     // S3: s3Icon,
     // EC2: ec2Icon,
     // Lambda: lambdaIcon,
@@ -140,6 +141,7 @@ const TECH_ICONS = {
     // "CI/CD": ciCdIcon,
 
     Postman: postmanIcon,
+    "IntelliJ IDEA": intellijIcon,
     // Eclipse: eclipseIcon,
     "Visual Studio Code": vscodeIcon,
     Figma: figmaIcon,

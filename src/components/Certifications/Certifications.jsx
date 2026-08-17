@@ -145,9 +145,7 @@ const Certifications = () => {
           <div className="slide center">
             <img src="/assets/images/certificates/ibase.png" alt="" />
           </div>
-          {/* <div className="slide center">
-            <img src="/assets/images/certificates/sailpoint-ambassador.png" alt="" />
-          </div> */}
+          
         </div>
       </div>
     </section>

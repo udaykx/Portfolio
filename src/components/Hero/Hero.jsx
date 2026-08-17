@@ -90,8 +90,8 @@ const Hero = () => {
           </div>
           {/* <a
               className="download-button"
-              href="/assets/files/Sisvanthkumar_Sathivadivel__SweResume.pdf"
-              download="Sisvanthkumar_Sathivadivel__SweResume.pdf"
+              href="/assets/files/35_Udaykumar.pdf"
+              download="35_Udaykumar.pdf"
               onClick={(e) => {
                 console.log("ASFAFS") // Prevent the click from propagating to the scroll trigger
               }}
