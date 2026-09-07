@@ -4,7 +4,7 @@ import { ScrollTrigger, SplitText, ScrollSmoother } from "gsap/all";
 
 import Wrap from './components/Wrap/Wrap.jsx'
 import Cursor from "./ui/cursor/Cursor.jsx";
-import Navbar from "./components/NavBar/Navbar";
+import Navbar from "./components/NavBar/NavBar.jsx";
 import Hero from "./components/Hero/Hero.jsx";
 import WhoAmI from "./components/WhoAmI/WhoAmI.jsx";
 import Experience from "./components/Experience/Experience.jsx";
