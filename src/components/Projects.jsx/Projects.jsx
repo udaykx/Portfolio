@@ -20,7 +20,7 @@ const PROJECTS = [
    tags: ["MongoDB", "React", "GenAI", "API Gateway"],
     links: [
       { label: "Live Demo", href: "", icon: "↗" },
-      { label: "Source Code", href: "https://github.com/udaykx/SOEN", icon: "⌂" },
+      { label: "Source Code", href: "https://soen-zeta.vercel.app?_vercel_share=pc8ah8GdHvOcFnFZFTW0iZpGOaYfUqFe", icon: "⌂" },
     ],
   },
 ];
